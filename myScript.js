@@ -1,5 +1,5 @@
-# HISTORY:
-# 9/29/2020: Adding a comment to check "git push" functionality.
+// HISTORY:
+// 9/29/2020: Adding a comment to check "git push" functionality.
 
 function pFindByName2() {
     window.alert("In pFindByName");

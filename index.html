@@ -98,13 +98,13 @@
     <form>
       <label for="pNumber"><strong>Search by Number</strong></label>
       <input type="number" id="pNumber" name="pNummber" min="0" max="20">
-      <button onkeyup="pFind(document.getElementById('pNumber'), 1)">Submit</button>
+      <button onclick="pFind(document.getElementById('pNumber'), 1)">Submit</button>
     </form> 
     <form>
       <label for="pName"><strong>Search by Name</strong></label>
       <input type="text" id="pName" name="pName" maxlength="20">
-      <!--      <input type="submit" onkeyup="pFindByName()" > -->
-      <button onkeyup="pFind(document.getElementById('pName'), 0)">Submit</button>
+      <!--      <input type="submit" onclick="pFindByName()" > -->
+      <button onclick="pFind(document.getElementById('pName'), 0)">Submit</button>
     </form> 
     <!-- Trigger/Open The Modal -->
     <button id="myBtn" onclick="openModal()">Open Modal</button>
@@ -122,7 +122,8 @@
       <li>	
 	<h3>(1) Bulbasaur</h3>
 	<div style='float:left'>
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/1.png" alt="1.png" id="example">
+<!--	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/1.png" alt="1.png" id="example">	  -->
+	  <img src="./Lab1-pokemon-images/pokemon/1.png" alt="1.png" id="example">
 	</div>
 	<div style='float:leftt'>
 	  <table>
@@ -137,7 +138,7 @@
       <li>
 	<h3>(2) Ivysaur</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/2.png" alt="2.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/2.png" alt="2.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -152,7 +153,7 @@
       <li>
 	<h3>(3) Venusaur</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/3.png" alt="3.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/3.png" alt="3.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -167,7 +168,7 @@
       <li>
 	<h3>(4) Charmander</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/4.png" alt="4.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/4.png" alt="4.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -182,7 +183,7 @@
       <li>
 	<h3>(5) Charmeleon</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/5.png" alt="5.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/5.png" alt="5.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -197,7 +198,7 @@
       <li>
 	<h3>(6) Charizard</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/6.png" alt="6.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/6.png" alt="6.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -212,7 +213,7 @@
       <li>
 	<h3>(7) Squirtle</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/7.png" alt="7.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/7.png" alt="7.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -227,7 +228,7 @@
       <li>
 	<h3>(8) Wartortle</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/8.png" alt="8.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/8.png" alt="8.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -242,7 +243,7 @@
       <li>
 	<h3>(9) Blastoise</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/9.png" alt="9.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/9.png" alt="9.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -257,7 +258,7 @@
       <li>
 	<h3>(10) Caterpie</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/10.png" alt="10.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/10.png" alt="10.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -272,7 +273,7 @@
       <li>
 	<h3>(11) Metapod</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/11.png" alt="11.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/11.png" alt="11.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -287,7 +288,7 @@
       <li>
 	<h3>(12) Butterfree</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/12.png" alt="12.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/12.png" alt="12.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -302,7 +303,7 @@
       <li>
 	<h3>(13) Weedle</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/13.png" alt="13.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/13.png" alt="13.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -317,7 +318,7 @@
       <li>
 	<h3>(14) Kakuna</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/14.png" alt="14.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/14.png" alt="14.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -332,7 +333,7 @@
       <li>
 	<h3>(15) Beedrill</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/15.png" alt="15.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/15.png" alt="15.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -347,7 +348,7 @@
       <li>
 	<h3>(16) Pidgey</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/16.png" alt="16.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/16.png" alt="16.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -362,7 +363,7 @@
       <li>
 	<h3>(17) Pidgeotto</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/17.png" alt="17.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/17.png" alt="17.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -377,7 +378,7 @@
       <li>
 	<h3>(18) Pidgeot</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/18.png" alt="18.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/18.png" alt="18.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -392,7 +393,7 @@
       <li>
 	<h3>(19) Rattata</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/19.png" alt="19.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/19.png" alt="19.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
@@ -407,7 +408,7 @@
       <li>
 	<h3>(20) Raticate</h3>
 	<div id="imgDiv">
-	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/20.png" alt="20.png" id="example">
+	  <img src="./Lab1-pokemon-images/pokemon/20.png" alt="20.png" id="example">
 	</div>
 	<div id="tableDiv">
 	  <table>
