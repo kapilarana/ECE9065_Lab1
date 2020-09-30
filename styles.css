@@ -1,28 +1,27 @@
-<style  type="text/css">
+<style>
 
 table {
     border: 1px solid black;
     border-collapse: collapse;
-    width:44;
+    width:70%;
     margin-left:20%;
     float:top;
 }
 th, td {
-    margin: 5px;
+    margin: 1px;
     padding: 5px;
     border: 1px solid black;
     border-collapse: collapse;
 }
-#example {
+img.example {
     border: 2px black solid;
     margin-left:5px;
     margin-top:5px;
     width:120px;
     height:120px;
 }
-<!-- a img { border: 2px; } -->
 
-			    #imgDiv {
+div.imgDiv {
     float:left;
 }
 
@@ -36,20 +35,19 @@ ul {
 h3 {
     margin:0;
     padding:0;
-    <!--color:blue;-->
-		   <!--	 font-size:60px; -->
-} 
+}
+
 li {
     border:1px solid grey;
     margin: 5px;
     padding: 5px;
-    width:55%;
-    <!--	 font-size:60px; -->
+    width:70%;
 }
-<!--     img {
+
+img {
     margin-left:15%;
     margin-top:5%;
-} -->
+}
 
   /* The Modal (background) */
   .modal {

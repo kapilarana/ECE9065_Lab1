@@ -1,6 +1,8 @@
 // HISTORY:
 // 9/29/2020: Adding a comment to check "git push" functionality.
 
+"use strict";
+
 function pFindByName2() {
     window.alert("In pFindByName");
     //	  var x = document.getElementById("Ivysaur");
@@ -67,7 +69,7 @@ function pFind(input, isInt) {
 	console.log("txtValue=" + txtValue + ", display=" + li[i].style.display);
     }
     //alert(results);
-    searchResultsStr = results;
+    searchResultsStr = new String(results);
     alert(searchResultsStr);
     console.log(searchResultsStr);
     
@@ -122,7 +124,7 @@ function openModal()
 
     var psr = document.getElementById("pSearchResults");
     console.log(psr);
-    psr.innerHTML = "New Text!"; //searchResultsStr;
+    psr.innerHTML = searchResultsStr;
     console.log(searchResultsStr);
 
     // Get the <span> element that closes the modal

@@ -1,6 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <title>ECE9065 Web Application Development: Lab-1</title>
+    <meta name="description" content="Pokédex for the first 20 Pokémon.">
+    <meta name="author" content="Kapila Ranasinghe">
     <link rel="stylesheet" href="styles.css">
   </head>
   
@@ -16,321 +20,289 @@
       <!--      <input type="submit" onclick="pFindByName()" > -->
       <button onclick="pFind(document.getElementById('pName'), 0)">Submit</button>
     </form> 
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn" onclick="openModal()">Open Modal</button>
 
-    <div id="myModal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-	<span class="close">&times;</span>
-	<p id="pSearchResults">Some text in the Modal..</p>
-      </div>
-    </div>
-    
     <ul id="pUl">
-      <!--      <li style="display:none;" > -->
-      <li>	
-	<h3>(1) Bulbasaur</h3>
-	<div style='float:left'>
-<!--	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/1.png" alt="1.png" id="example">	  -->
-	  <img src="./Lab1-pokemon-images/pokemon/1.png" alt="1.png" id="example">
+      <li>
+	<h3>Bulbasaur</h3>
+	<div  class="imgDiv">
+	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/1.png" alt="1.png" class="example">
 	</div>
-	<div style='float:leftt'>
-	  <table>
-	    <tr> <td>Name: Bulbasaur</td> <td>Candy Cost: 25</td> <td>Fast Move 2: Vine Whip</td> </tr>
-	    <tr> <td>Number: 1</td> <td>Type 1: Grass</td> <td>Charge Move 1: Sludge Bomb</td> </tr>
-	    <tr> <td>Parent:</td> <td>Type 2: Poison</td> <td>Charge Move 2: Seed Bomb</td> </tr>
-	    <tr> <td>Descendant: Ivysaur</td> <td>Fast Move 1: Tackle</td> <td>Charge Move 3: Power Whip</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Bulbasaur</td> <td>Candy Cost: 25</td> <td>Fast Move 2: Vine Whip</td> </tr>
+	  <tr> <td>Number: 1</td> <td>Type 1: Grass</td> <td>Charge Move 1: Sludge Bomb</td> </tr>
+	  <tr> <td>Parent:</td> <td>Type 2: Poison</td> <td>Charge Move 2: Seed Bomb</td> </tr>
+	  <tr> <td>Descendant: Ivysaur</td> <td>Fast Move 1: Tackle</td> <td>Charge Move 3: Power Whip</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(2) Ivysaur</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/2.png" alt="2.png" id="example">
+	<h3>Ivysaur</h3>
+	<div class="imgDiv">
+	  <img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/2.png" alt="2.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Ivysaur</td> <td>Candy Cost: 100</td> <td>Fast Move 2: Vine Whip</td> </tr>
-	    <tr> <td>Number: 2</td> <td>Type 1: Grass</td> <td>Charge Move 1: Sludge Bomb</td> </tr>
-	    <tr> <td>Parent: Bulbasaur</td> <td>Type 2: Poison</td> <td>Charge Move 2: Solar Beam</td> </tr>
-	    <tr> <td>Descendant: Venusaur</td> <td>Fast Move 1: Razor Leaf</td> <td>Charge Move 3: Power Whip</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Ivysaur</td> <td>Candy Cost: 100</td> <td>Fast Move 2: Vine Whip</td> </tr>
+	  <tr> <td>Number: 2</td> <td>Type 1: Grass</td> <td>Charge Move 1: Sludge Bomb</td> </tr>
+	  <tr> <td>Parent: Bulbasaur</td> <td>Type 2: Poison</td> <td>Charge Move 2: Solar Beam</td> </tr>
+	  <tr> <td>Descendant: Venusaur</td> <td>Fast Move 1: Razor Leaf</td> <td>Charge Move 3: Power Whip</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(3) Venusaur</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/3.png" alt="3.png" id="example">
+	<h3>Venusaur</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/3.png" alt="3.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Venusaur</td> <td>Candy Cost:</td> <td>Fast Move 2: Vine Whip</td> </tr>
-	    <tr> <td>Number: 3</td> <td>Type 1: Grass</td> <td>Charge Move 1: Sludge Bomb</td> </tr>
-	    <tr> <td>Parent: Ivysaur</td> <td>Type 2: Poison</td> <td>Charge Move 2: Solar Beam</td> </tr>
-	    <tr> <td>Descendant:</td> <td>Fast Move 1: Razor Leaf</td> <td>Charge Move 3: Petal Blizzard</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Venusaur</td> <td>Candy Cost:</td> <td>Fast Move 2: Vine Whip</td> </tr>
+	  <tr> <td>Number: 3</td> <td>Type 1: Grass</td> <td>Charge Move 1: Sludge Bomb</td> </tr>
+	  <tr> <td>Parent: Ivysaur</td> <td>Type 2: Poison</td> <td>Charge Move 2: Solar Beam</td> </tr>
+	  <tr> <td>Descendant:</td> <td>Fast Move 1: Razor Leaf</td> <td>Charge Move 3: Petal Blizzard</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(4) Charmander</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/4.png" alt="4.png" id="example">
+	<h3>Charmander</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/4.png" alt="4.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Charmander</td> <td>Candy Cost: 25</td> <td>Fast Move 2: Scratch</td> </tr>
-	    <tr> <td>Number: 4</td> <td>Type 1: Fire</td> <td>Charge Move 1: Flame Burst</td> </tr>
-	    <tr> <td>Parent:</td> <td>Type 2:</td> <td>Charge Move 2: Flamethrower</td> </tr>
-	    <tr> <td>Descendant: Charmeleon</td> <td>Fast Move 1: Ember</td> <td>Charge Move 3: Flame Charge</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Charmander</td> <td>Candy Cost: 25</td> <td>Fast Move 2: Scratch</td> </tr>
+	  <tr> <td>Number: 4</td> <td>Type 1: Fire</td> <td>Charge Move 1: Flame Burst</td> </tr>
+	  <tr> <td>Parent:</td> <td>Type 2:</td> <td>Charge Move 2: Flamethrower</td> </tr>
+	  <tr> <td>Descendant: Charmeleon</td> <td>Fast Move 1: Ember</td> <td>Charge Move 3: Flame Charge</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(5) Charmeleon</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/5.png" alt="5.png" id="example">
+	<h3>Charmeleon</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/5.png" alt="5.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Charmeleon</td> <td>Candy Cost: 100</td> <td>Fast Move 2: Fire Fang</td> </tr>
-	    <tr> <td>Number: 5</td> <td>Type 1: Fire</td> <td>Charge Move 1: Flame Burst</td> </tr>
-	    <tr> <td>Parent: Charmander</td> <td>Type 2:</td> <td>Charge Move 2: Flamethrower</td> </tr>
-	    <tr> <td>Descendant: Charizard</td> <td>Fast Move 1: Ember</td> <td>Charge Move 3: Fire Punch</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Charmeleon</td> <td>Candy Cost: 100</td> <td>Fast Move 2: Fire Fang</td> </tr>
+	  <tr> <td>Number: 5</td> <td>Type 1: Fire</td> <td>Charge Move 1: Flame Burst</td> </tr>
+	  <tr> <td>Parent: Charmander</td> <td>Type 2:</td> <td>Charge Move 2: Flamethrower</td> </tr>
+	  <tr> <td>Descendant: Charizard</td> <td>Fast Move 1: Ember</td> <td>Charge Move 3: Fire Punch</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(6) Charizard</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/6.png" alt="6.png" id="example">
+	<h3>Charizard</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/6.png" alt="6.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Charizard</td> <td>Candy Cost:</td> <td>Fast Move 2: Air Slash</td> </tr>
-	    <tr> <td>Number: 6</td> <td>Type 1: Fire</td> <td>Charge Move 1: Fire Blast</td> </tr>
-	    <tr> <td>Parent: Charmeleon</td> <td>Type 2: Flying</td> <td>Charge Move 2: Dragon Claw</td> </tr>
-	    <tr> <td>Descendant:</td> <td>Fast Move 1: Fire Spin</td> <td>Charge Move 3: Overheat</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Charizard</td> <td>Candy Cost:</td> <td>Fast Move 2: Air Slash</td> </tr>
+	  <tr> <td>Number: 6</td> <td>Type 1: Fire</td> <td>Charge Move 1: Fire Blast</td> </tr>
+	  <tr> <td>Parent: Charmeleon</td> <td>Type 2: Flying</td> <td>Charge Move 2: Dragon Claw</td> </tr>
+	  <tr> <td>Descendant:</td> <td>Fast Move 1: Fire Spin</td> <td>Charge Move 3: Overheat</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(7) Squirtle</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/7.png" alt="7.png" id="example">
+	<h3>Squirtle</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/7.png" alt="7.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Squirtle</td> <td>Candy Cost: 25</td> <td>Fast Move 2: Bubble</td> </tr>
-	    <tr> <td>Number: 7</td> <td>Type 1: Water</td> <td>Charge Move 1: Aqua Jet</td> </tr>
-	    <tr> <td>Parent:</td> <td>Type 2:</td> <td>Charge Move 2: Aqua Tail</td> </tr>
-	    <tr> <td>Descendant: Wartortle</td> <td>Fast Move 1: Tackle</td> <td>Charge Move 3: Water Pulse</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Squirtle</td> <td>Candy Cost: 25</td> <td>Fast Move 2: Bubble</td> </tr>
+	  <tr> <td>Number: 7</td> <td>Type 1: Water</td> <td>Charge Move 1: Aqua Jet</td> </tr>
+	  <tr> <td>Parent:</td> <td>Type 2:</td> <td>Charge Move 2: Aqua Tail</td> </tr>
+	  <tr> <td>Descendant: Wartortle</td> <td>Fast Move 1: Tackle</td> <td>Charge Move 3: Water Pulse</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(8) Wartortle</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/8.png" alt="8.png" id="example">
+	<h3>Wartortle</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/8.png" alt="8.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Wartortle</td> <td>Candy Cost: 100</td> <td>Fast Move 2: Water Gun</td> </tr>
-	    <tr> <td>Number: 8</td> <td>Type 1: Water</td> <td>Charge Move 1: Aqua Jet</td> </tr>
-	    <tr> <td>Parent: Squirtle</td> <td>Type 2:</td> <td>Charge Move 2: Hydro Pump</td> </tr>
-	    <tr> <td>Descendant: Blastoise</td> <td>Fast Move 1: Bite</td> <td>Charge Move 3: Ice Beam</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Wartortle</td> <td>Candy Cost: 100</td> <td>Fast Move 2: Water Gun</td> </tr>
+	  <tr> <td>Number: 8</td> <td>Type 1: Water</td> <td>Charge Move 1: Aqua Jet</td> </tr>
+	  <tr> <td>Parent: Squirtle</td> <td>Type 2:</td> <td>Charge Move 2: Hydro Pump</td> </tr>
+	  <tr> <td>Descendant: Blastoise</td> <td>Fast Move 1: Bite</td> <td>Charge Move 3: Ice Beam</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(9) Blastoise</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/9.png" alt="9.png" id="example">
+	<h3>Blastoise</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/9.png" alt="9.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Blastoise</td> <td>Candy Cost:</td> <td>Fast Move 2: Water Gun</td> </tr>
-	    <tr> <td>Number: 9</td> <td>Type 1: Water</td> <td>Charge Move 1: Ice Beam</td> </tr>
-	    <tr> <td>Parent: Wartortle</td> <td>Type 2:</td> <td>Charge Move 2: Hydro Pump</td> </tr>
-	    <tr> <td>Descendant:</td> <td>Fast Move 1: Bite</td> <td>Charge Move 3: Flash Cannon</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Blastoise</td> <td>Candy Cost:</td> <td>Fast Move 2: Water Gun</td> </tr>
+	  <tr> <td>Number: 9</td> <td>Type 1: Water</td> <td>Charge Move 1: Ice Beam</td> </tr>
+	  <tr> <td>Parent: Wartortle</td> <td>Type 2:</td> <td>Charge Move 2: Hydro Pump</td> </tr>
+	  <tr> <td>Descendant:</td> <td>Fast Move 1: Bite</td> <td>Charge Move 3: Flash Cannon</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(10) Caterpie</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/10.png" alt="10.png" id="example">
+	<h3>Caterpie</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/10.png" alt="10.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Caterpie</td> <td>Candy Cost: 12</td> <td>Fast Move 2: Bug Bite</td> </tr>
-	    <tr> <td>Number: 10</td> <td>Type 1: Bug</td> <td>Charge Move 1: Struggle</td> </tr>
-	    <tr> <td>Parent:</td> <td>Type 2:</td> <td>Charge Move 2:</td> </tr>
-	    <tr> <td>Descendant: Metapod</td> <td>Fast Move 1: Tackle</td> <td>Charge Move 3:</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Caterpie</td> <td>Candy Cost: 12</td> <td>Fast Move 2: Bug Bite</td> </tr>
+	  <tr> <td>Number: 10</td> <td>Type 1: Bug</td> <td>Charge Move 1: Struggle</td> </tr>
+	  <tr> <td>Parent:</td> <td>Type 2:</td> <td>Charge Move 2:</td> </tr>
+	  <tr> <td>Descendant: Metapod</td> <td>Fast Move 1: Tackle</td> <td>Charge Move 3:</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(11) Metapod</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/11.png" alt="11.png" id="example">
+	<h3>Metapod</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/11.png" alt="11.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Metapod</td> <td>Candy Cost: 50</td> <td>Fast Move 2: Bug Bite</td> </tr>
-	    <tr> <td>Number: 11</td> <td>Type 1: Bug</td> <td>Charge Move 1: Struggle</td> </tr>
-	    <tr> <td>Parent: Caterpie</td> <td>Type 2:</td> <td>Charge Move 2:</td> </tr>
-	    <tr> <td>Descendant: Butterfree</td> <td>Fast Move 1: Tackle</td> <td>Charge Move 3:</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Metapod</td> <td>Candy Cost: 50</td> <td>Fast Move 2: Bug Bite</td> </tr>
+	  <tr> <td>Number: 11</td> <td>Type 1: Bug</td> <td>Charge Move 1: Struggle</td> </tr>
+	  <tr> <td>Parent: Caterpie</td> <td>Type 2:</td> <td>Charge Move 2:</td> </tr>
+	  <tr> <td>Descendant: Butterfree</td> <td>Fast Move 1: Tackle</td> <td>Charge Move 3:</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(12) Butterfree</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/12.png" alt="12.png" id="example">
+	<h3>Butterfree</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/12.png" alt="12.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Butterfree</td> <td>Candy Cost:</td> <td>Fast Move 2: Confusion</td> </tr>
-	    <tr> <td>Number: 12</td> <td>Type 1: Bug</td> <td>Charge Move 1: Psychic</td> </tr>
-	    <tr> <td>Parent: Metapod</td> <td>Type 2: Flying</td> <td>Charge Move 2: Bug Buzz</td> </tr>
-	    <tr> <td>Descendant:</td> <td>Fast Move 1: Struggle Bug</td> <td>Charge Move 3: Signal Beam</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Butterfree</td> <td>Candy Cost:</td> <td>Fast Move 2: Confusion</td> </tr>
+	  <tr> <td>Number: 12</td> <td>Type 1: Bug</td> <td>Charge Move 1: Psychic</td> </tr>
+	  <tr> <td>Parent: Metapod</td> <td>Type 2: Flying</td> <td>Charge Move 2: Bug Buzz</td> </tr>
+	  <tr> <td>Descendant:</td> <td>Fast Move 1: Struggle Bug</td> <td>Charge Move 3: Signal Beam</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(13) Weedle</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/13.png" alt="13.png" id="example">
+	<h3>Weedle</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/13.png" alt="13.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Weedle</td> <td>Candy Cost: 12</td> <td>Fast Move 2: Poison Sting</td> </tr>
-	    <tr> <td>Number: 13</td> <td>Type 1: Bug</td> <td>Charge Move 1: Struggle</td> </tr>
-	    <tr> <td>Parent:</td> <td>Type 2: Poison</td> <td>Charge Move 2:</td> </tr>
-	    <tr> <td>Descendant: Kakuna</td> <td>Fast Move 1: Bug Bite</td> <td>Charge Move 3:</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Weedle</td> <td>Candy Cost: 12</td> <td>Fast Move 2: Poison Sting</td> </tr>
+	  <tr> <td>Number: 13</td> <td>Type 1: Bug</td> <td>Charge Move 1: Struggle</td> </tr>
+	  <tr> <td>Parent:</td> <td>Type 2: Poison</td> <td>Charge Move 2:</td> </tr>
+	  <tr> <td>Descendant: Kakuna</td> <td>Fast Move 1: Bug Bite</td> <td>Charge Move 3:</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(14) Kakuna</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/14.png" alt="14.png" id="example">
+	<h3>Kakuna</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/14.png" alt="14.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Kakuna</td> <td>Candy Cost: 50</td> <td>Fast Move 2: Poison Sting</td> </tr>
-	    <tr> <td>Number: 14</td> <td>Type 1: Bug</td> <td>Charge Move 1: Struggle</td> </tr>
-	    <tr> <td>Parent: Weedle</td> <td>Type 2: Poison</td> <td>Charge Move 2:</td> </tr>
-	    <tr> <td>Descendant: Beedrill</td> <td>Fast Move 1: Bug Bite</td> <td>Charge Move 3:</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Kakuna</td> <td>Candy Cost: 50</td> <td>Fast Move 2: Poison Sting</td> </tr>
+	  <tr> <td>Number: 14</td> <td>Type 1: Bug</td> <td>Charge Move 1: Struggle</td> </tr>
+	  <tr> <td>Parent: Weedle</td> <td>Type 2: Poison</td> <td>Charge Move 2:</td> </tr>
+	  <tr> <td>Descendant: Beedrill</td> <td>Fast Move 1: Bug Bite</td> <td>Charge Move 3:</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(15) Beedrill</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/15.png" alt="15.png" id="example">
+	<h3>Beedrill</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/15.png" alt="15.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Beedrill</td> <td>Candy Cost:</td> <td>Fast Move 2: Poison Jab</td> </tr>
-	    <tr> <td>Number: 15</td> <td>Type 1: Bug</td> <td>Charge Move 1: Aerial Ace</td> </tr>
-	    <tr> <td>Parent: Kakuna</td> <td>Type 2: Poison</td> <td>Charge Move 2: Sludge Bomb</td> </tr>
-	    <tr> <td>Descendant:</td> <td>Fast Move 1: Infestation</td> <td>Charge Move 3: XScissor</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Beedrill</td> <td>Candy Cost:</td> <td>Fast Move 2: Poison Jab</td> </tr>
+	  <tr> <td>Number: 15</td> <td>Type 1: Bug</td> <td>Charge Move 1: Aerial Ace</td> </tr>
+	  <tr> <td>Parent: Kakuna</td> <td>Type 2: Poison</td> <td>Charge Move 2: Sludge Bomb</td> </tr>
+	  <tr> <td>Descendant:</td> <td>Fast Move 1: Infestation</td> <td>Charge Move 3: XScissor</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(16) Pidgey</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/16.png" alt="16.png" id="example">
+	<h3>Pidgey</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/16.png" alt="16.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Pidgey</td> <td>Candy Cost: 12</td> <td>Fast Move 2: Quick Attack</td> </tr>
-	    <tr> <td>Number: 16</td> <td>Type 1: Normal</td> <td>Charge Move 1: Twister</td> </tr>
-	    <tr> <td>Parent:</td> <td>Type 2: Flying</td> <td>Charge Move 2: Aerial Ace</td> </tr>
-	    <tr> <td>Descendant: Pidgeotto</td> <td>Fast Move 1: Tackle</td> <td>Charge Move 3: Air Cutter</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Pidgey</td> <td>Candy Cost: 12</td> <td>Fast Move 2: Quick Attack</td> </tr>
+	  <tr> <td>Number: 16</td> <td>Type 1: Normal</td> <td>Charge Move 1: Twister</td> </tr>
+	  <tr> <td>Parent:</td> <td>Type 2: Flying</td> <td>Charge Move 2: Aerial Ace</td> </tr>
+	  <tr> <td>Descendant: Pidgeotto</td> <td>Fast Move 1: Tackle</td> <td>Charge Move 3: Air Cutter</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(17) Pidgeotto</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/17.png" alt="17.png" id="example">
+	<h3>Pidgeotto</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/17.png" alt="17.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Pidgeotto</td> <td>Candy Cost: 50</td> <td>Fast Move 2: Steel Wing</td> </tr>
-	    <tr> <td>Number: 17</td> <td>Type 1: Normal</td> <td>Charge Move 1: Twister</td> </tr>
-	    <tr> <td>Parent: Pidgey</td> <td>Type 2: Flying</td> <td>Charge Move 2: Aerial Ace</td> </tr>
-	    <tr> <td>Descendant: Pidgeot</td> <td>Fast Move 1: Wing Attack</td> <td>Charge Move 3: Air Cutter</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Pidgeotto</td> <td>Candy Cost: 50</td> <td>Fast Move 2: Steel Wing</td> </tr>
+	  <tr> <td>Number: 17</td> <td>Type 1: Normal</td> <td>Charge Move 1: Twister</td> </tr>
+	  <tr> <td>Parent: Pidgey</td> <td>Type 2: Flying</td> <td>Charge Move 2: Aerial Ace</td> </tr>
+	  <tr> <td>Descendant: Pidgeot</td> <td>Fast Move 1: Wing Attack</td> <td>Charge Move 3: Air Cutter</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(18) Pidgeot</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/18.png" alt="18.png" id="example">
+	<h3>Pidgeot</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/18.png" alt="18.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Pidgeot</td> <td>Candy Cost:</td> <td>Fast Move 2: Steel Wing</td> </tr>
-	    <tr> <td>Number: 18</td> <td>Type 1: Normal</td> <td>Charge Move 1: Hurricane</td> </tr>
-	    <tr> <td>Parent: Pidgeotto</td> <td>Type 2: Flying</td> <td>Charge Move 2: Aerial Ace</td> </tr>
-	    <tr> <td>Descendant:</td> <td>Fast Move 1: Air Slash</td> <td>Charge Move 3: Brave Bird</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Pidgeot</td> <td>Candy Cost:</td> <td>Fast Move 2: Steel Wing</td> </tr>
+	  <tr> <td>Number: 18</td> <td>Type 1: Normal</td> <td>Charge Move 1: Hurricane</td> </tr>
+	  <tr> <td>Parent: Pidgeotto</td> <td>Type 2: Flying</td> <td>Charge Move 2: Aerial Ace</td> </tr>
+	  <tr> <td>Descendant:</td> <td>Fast Move 1: Air Slash</td> <td>Charge Move 3: Brave Bird</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(19) Rattata</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/19.png" alt="19.png" id="example">
+	<h3>Rattata</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/19.png" alt="19.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Rattata</td> <td>Candy Cost: 25</td> <td>Fast Move 2: Quick Attack</td> </tr>
-	    <tr> <td>Number: 19</td> <td>Type 1: Normal</td> <td>Charge Move 1: Dig</td> </tr>
-	    <tr> <td>Parent:</td> <td>Type 2:</td> <td>Charge Move 2: Hyper Fang</td> </tr>
-	    <tr> <td>Descendant: Raticate</td> <td>Fast Move 1: Tackle</td> <td>Charge Move 3: Body Slam</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Rattata</td> <td>Candy Cost: 25</td> <td>Fast Move 2: Quick Attack</td> </tr>
+	  <tr> <td>Number: 19</td> <td>Type 1: Normal</td> <td>Charge Move 1: Dig</td> </tr>
+	  <tr> <td>Parent:</td> <td>Type 2:</td> <td>Charge Move 2: Hyper Fang</td> </tr>
+	  <tr> <td>Descendant: Raticate</td> <td>Fast Move 1: Tackle</td> <td>Charge Move 3: Body Slam</td> </tr>
+	</table>
 	</div>
       </li>
-      <h3><br></h3>
       <li>
-	<h3>(20) Raticate</h3>
-	<div id="imgDiv">
-	  <img src="./Lab1-pokemon-images/pokemon/20.png" alt="20.png" id="example">
+	<h3>Raticate</h3>
+	<div class="imgDiv">
+	<img src="c:/Kapila/ECE9065_WebApplicationDevelopment/Lab-1/Lab1-pokemon-images/pokemon/20.png" alt="20.png" class="example">
 	</div>
-	<div id="tableDiv">
-	  <table>
-	    <tr> <td>Name: Raticate</td> <td>Candy Cost:</td> <td>Fast Move 2: Quick Attack</td> </tr>
-	    <tr> <td>Number: 20</td> <td>Type 1: Normal</td> <td>Charge Move 1: Dig</td> </tr>
-	    <tr> <td>Parent: Rattata</td> <td>Type 2:</td> <td>Charge Move 2: Hyper Fang</td> </tr>
-	    <tr> <td>Descendant:</td> <td>Fast Move 1: Bite</td> <td>Charge Move 3: Hyper Beam</td> </tr>
-	  </table>
+	<div>
+	<table>
+	  <tr> <td>Name: Raticate</td> <td>Candy Cost:</td> <td>Fast Move 2: Quick Attack</td> </tr>
+	  <tr> <td>Number: 20</td> <td>Type 1: Normal</td> <td>Charge Move 1: Dig</td> </tr>
+	  <tr> <td>Parent: Rattata</td> <td>Type 2:</td> <td>Charge Move 2: Hyper Fang</td> </tr>
+	  <tr> <td>Descendant:</td> <td>Fast Move 1: Bite</td> <td>Charge Move 3: Hyper Beam</td> </tr>
+	</table>
 	</div>
       </li>
     </ul>
-
     <script src="myScript.js"></script>    
   </body>
 </html>
