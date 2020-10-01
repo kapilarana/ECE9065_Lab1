@@ -12,10 +12,10 @@
     <h2 id="h2Pokedex">Pokedex</h2>
     
     <form id="formSearch">
-       <label for="pSearchStr"><strong>Search</strong></label>
+       <label for="pSearchStr"><strong>Search <small>(by Name or Number)</small></strong></label><br>
       <input type="text" id="pSearchStr" name="pSearchStr" maxlength="20" onkeyup="pFind(document.getElementById('pSearchStr'))">
 <!--      <input type="submit" onkeyup="pFind(document.getElementById('pSearchStr'))"> --> 
-      <button onclick="window.reload()"><strong>X</strong></button>
+      <button onclick="window.reload()"><strong>X</strong></button><br>
     </form>
 
     <div id="divSearchResults"></div>
