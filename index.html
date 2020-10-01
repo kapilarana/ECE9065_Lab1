@@ -9,21 +9,20 @@
   </head>
   
   <body>
-    <form>
-      <label for="pNumber"><strong>Search by Number</strong></label>
-      <input type="number" id="pNumber" name="pNummber" min="0" max="20">
-      <button onclick="pFind(document.getElementById('pNumber'), 1)">Submit</button>
-    </form> 
-    <form>
-      <label for="pName"><strong>Search by Name</strong></label>
-      <input type="text" id="pName" name="pName" maxlength="20">
-      <!--      <input type="submit" onclick="pFindByName()" > -->
-      <button onclick="pFind(document.getElementById('pName'), 0)">Submit</button>
-    </form> 
+    <h2 id="h2Pokedex">Pokedex</h2>
+    
+    <form id="formSearch">
+       <label for="pSearchStr"><strong>Search</strong></label>
+      <input type="text" id="pSearchStr" name="pSearchStr" maxlength="20" onkeyup="pFind(document.getElementById('pSearchStr'))">
+<!--      <input type="submit" onkeyup="pFind(document.getElementById('pSearchStr'))"> --> 
+      <button onclick="window.reload()"><strong>X</strong></button>
+    </form>
 
+    <div id="divSearchResults"></div>
+    
     <ul id="pUl">
       <li>
-	<h3>Bulbasaur</h3>
+	<h3>(1) Bulbasaur</h3>
 	<div  class="imgDiv">
 	  <img src="Lab1-pokemon-images/pokemon/1.png" alt="1.png" class="example">
 	</div>
@@ -37,7 +36,7 @@
 	</div>
       </li>
       <li>
-	<h3>Ivysaur</h3>
+	<h3>(2) Ivysaur</h3>
 	<div class="imgDiv">
 	  <img src="Lab1-pokemon-images/pokemon/2.png" alt="2.png" class="example">
 	</div>
@@ -51,7 +50,7 @@
 	</div>
       </li>
       <li>
-	<h3>Venusaur</h3>
+	<h3>(3) Venusaur</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/3.png" alt="3.png" class="example">
 	</div>
@@ -65,7 +64,7 @@
 	</div>
       </li>
       <li>
-	<h3>Charmander</h3>
+	<h3>(4) Charmander</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/4.png" alt="4.png" class="example">
 	</div>
@@ -79,7 +78,7 @@
 	</div>
       </li>
       <li>
-	<h3>Charmeleon</h3>
+	<h3>(5) Charmeleon</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/5.png" alt="5.png" class="example">
 	</div>
@@ -93,7 +92,7 @@
 	</div>
       </li>
       <li>
-	<h3>Charizard</h3>
+	<h3>(6) Charizard</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/6.png" alt="6.png" class="example">
 	</div>
@@ -107,7 +106,7 @@
 	</div>
       </li>
       <li>
-	<h3>Squirtle</h3>
+	<h3>(7) Squirtle</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/7.png" alt="7.png" class="example">
 	</div>
@@ -121,7 +120,7 @@
 	</div>
       </li>
       <li>
-	<h3>Wartortle</h3>
+	<h3>(8) Wartortle</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/8.png" alt="8.png" class="example">
 	</div>
@@ -135,7 +134,7 @@
 	</div>
       </li>
       <li>
-	<h3>Blastoise</h3>
+	<h3>(9) Blastoise</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/9.png" alt="9.png" class="example">
 	</div>
@@ -149,7 +148,7 @@
 	</div>
       </li>
       <li>
-	<h3>Caterpie</h3>
+	<h3>(10) Caterpie</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/10.png" alt="10.png" class="example">
 	</div>
@@ -163,7 +162,7 @@
 	</div>
       </li>
       <li>
-	<h3>Metapod</h3>
+	<h3>(11) Metapod</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/11.png" alt="11.png" class="example">
 	</div>
@@ -177,7 +176,7 @@
 	</div>
       </li>
       <li>
-	<h3>Butterfree</h3>
+	<h3>(12) Butterfree</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/12.png" alt="12.png" class="example">
 	</div>
@@ -191,7 +190,7 @@
 	</div>
       </li>
       <li>
-	<h3>Weedle</h3>
+	<h3>(13) Weedle</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/13.png" alt="13.png" class="example">
 	</div>
@@ -205,7 +204,7 @@
 	</div>
       </li>
       <li>
-	<h3>Kakuna</h3>
+	<h3>(14) Kakuna</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/14.png" alt="14.png" class="example">
 	</div>
@@ -219,7 +218,7 @@
 	</div>
       </li>
       <li>
-	<h3>Beedrill</h3>
+	<h3>(15) Beedrill</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/15.png" alt="15.png" class="example">
 	</div>
@@ -233,7 +232,7 @@
 	</div>
       </li>
       <li>
-	<h3>Pidgey</h3>
+	<h3>(16) Pidgey</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/16.png" alt="16.png" class="example">
 	</div>
@@ -247,7 +246,7 @@
 	</div>
       </li>
       <li>
-	<h3>Pidgeotto</h3>
+	<h3>(17) Pidgeotto</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/17.png" alt="17.png" class="example">
 	</div>
@@ -261,7 +260,7 @@
 	</div>
       </li>
       <li>
-	<h3>Pidgeot</h3>
+	<h3>(18) Pidgeot</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/18.png" alt="18.png" class="example">
 	</div>
@@ -275,7 +274,7 @@
 	</div>
       </li>
       <li>
-	<h3>Rattata</h3>
+	<h3>(19) Rattata</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/19.png" alt="19.png" class="example">
 	</div>
@@ -289,7 +288,7 @@
 	</div>
       </li>
       <li>
-	<h3>Raticate</h3>
+	<h3>(20) Raticate</h3>
 	<div class="imgDiv">
 	<img src="Lab1-pokemon-images/pokemon/20.png" alt="20.png" class="example">
 	</div>
